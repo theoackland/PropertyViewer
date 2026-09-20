@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+:root { color-scheme: light; font-family: 'DM Sans', sans-serif; color: #172522; background: #c6d0ca; }
+* { box-sizing: border-box; }
+html, body, #app, property-viewer { display: block; width: 100%; height: 100%; margin: 0; overflow: hidden; }
+button { font: inherit; }
+.viewer-root { position: fixed; inset: 0; }
+.viewer-root canvas { display: block; width: 100%; height: 100%; }
+.viewer-ui { position: fixed; inset: 0; pointer-events: none; padding: clamp(20px, 4vw, 52px); }
+.brand-lockup { position: absolute; top: clamp(20px, 4vw, 52px); left: clamp(20px, 4vw, 52px); display: flex; gap: 10px; align-items: center; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; text-shadow: 0 1px 12px #25332f88; }
+.brand-mark { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid #fff9; border-radius: 50%; font-family: 'Playfair Display', serif; font-size: 16px; }
+.tour-panel { position: absolute; top: clamp(20px, 4vw, 52px); right: clamp(20px, 4vw, 52px); width: min(340px, calc(100vw - 40px)); padding: 25px; border: 1px solid #ffffff80; border-radius: 8px; background: #f7f5efee; box-shadow: 0 18px 45px #1b302c28; pointer-events: auto; backdrop-filter: blur(16px); }
+.eyebrow { color: #6c7f78; font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+h1 { margin: 7px 0 2px; font-family: 'Playfair Display', serif; font-size: 29px; font-weight: 500; letter-spacing: 0; }
+.tour-heading p { margin: 0; color: #66766f; font-size: 13px; }
+.tour-actions { position: absolute; top: 22px; right: 22px; display: flex; gap: 6px; }
+.icon-button { width: 31px; height: 31px; border: 1px solid #c9d0c9; border-radius: 50%; color: #49635a; background: transparent; cursor: pointer; font-size: 17px; line-height: 1; }
+.icon-button:hover { color: #fff; background: #31564b; border-color: #31564b; }
+.divider { height: 1px; margin: 23px 0 12px; background: #d8ddd7; }
+.location-list { display: grid; gap: 3px; max-height: 45vh; overflow: auto; }
+.location-button { display: flex; justify-content: space-between; align-items: center; padding: 10px 4px; border: 0; border-bottom: 1px solid #e4e6e0; color: #40564e; background: transparent; cursor: pointer; text-align: left; }
+.location-button:hover { color: #173c32; padding-left: 8px; }
+.arrow { color: #8b9e94; font-size: 16px; }
+.no-destinations { color: #83918a; font-size: 12px; }
+.status-pill { position: absolute; bottom: clamp(20px, 4vw, 52px); left: clamp(20px, 4vw, 52px); display: flex; gap: 9px; align-items: center; padding: 10px 14px; border: 1px solid #ffffff70; border-radius: 30px; color: #fff; background: #193b32b8; font-size: 11px; letter-spacing: .03em; pointer-events: auto; backdrop-filter: blur(10px); }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #b8d27d; box-shadow: 0 0 0 4px #b8d27d25; }
+.error-banner { position: absolute; right: clamp(20px, 4vw, 52px); bottom: clamp(20px, 4vw, 52px); width: min(390px, calc(100vw - 40px)); padding: 15px 18px; border-left: 3px solid #a65345; border-radius: 4px; color: #65382f; background: #fff5efee; font-size: 13px; line-height: 1.45; pointer-events: auto; }
+@media (max-width: 600px) { .viewer-ui { padding: 18px; } .brand-lockup { top: 18px; left: 18px; } .tour-panel { top: auto; right: 18px; bottom: 72px; left: 18px; width: auto; padding: 18px; } .tour-panel .divider { margin: 15px 0 8px; } .location-list { grid-template-columns: 1fr 1fr; max-height: 27vh; gap: 0 12px; } .location-button { padding: 8px 2px; font-size: 12px; } .status-pill { bottom: 18px; left: 18px; } .error-banner { right: 18px; bottom: 18px; left: 18px; width: auto; } }
